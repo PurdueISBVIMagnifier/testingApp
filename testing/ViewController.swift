@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        let url = NSURL (string: "http://128.46.121.195:8081/"); //192.168.1.4:8081  //128.46.121.195:8081
+        let url = NSURL (string: "http://10.160.165.62:8081/"); //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081
         let request = NSURLRequest(url: url! as URL);
         webViewTest.loadRequest(request as URLRequest);
         
