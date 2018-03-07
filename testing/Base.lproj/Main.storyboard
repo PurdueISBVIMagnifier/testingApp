@@ -23,6 +23,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYP-w5-IYr">
+                                <rect key="frame" x="873" y="735" width="219" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90327477331606221" green="0.88908112622390822" blue="0.86726622225499661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Snap Picture">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeScreenshot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nt9-BE-tQZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -42,7 +53,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-79.856115107913666" y="131.65467625899282"/>
+            <point key="canvasLocation" x="-80.935251798561154" y="130.21582733812951"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Ge-W7-g7v">
