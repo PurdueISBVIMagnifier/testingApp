@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5453E12C205EDFC800294E28 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5453E12B205EDFC800294E28 /* MenuController.swift */; };
+		5453E12E205EF7C100294E28 /* SplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5453E12D205EF7C100294E28 /* SplitController.swift */; };
 		54B3200A205889F300167E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B595782048898D00AB4CAB /* ViewController.swift */; };
 		54B595772048898D00AB4CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B595762048898D00AB4CAB /* AppDelegate.swift */; };
 		54B5957C2048898D00AB4CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B5957A2048898D00AB4CAB /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5453E12B205EDFC800294E28 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		5453E12D205EF7C100294E28 /* SplitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitController.swift; sourceTree = "<group>"; };
 		54B595732048898D00AB4CAB /* testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B595762048898D00AB4CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B595782048898D00AB4CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				54B595762048898D00AB4CAB /* AppDelegate.swift */,
 				54B595782048898D00AB4CAB /* ViewController.swift */,
 				5453E12B205EDFC800294E28 /* MenuController.swift */,
+				5453E12D205EF7C100294E28 /* SplitController.swift */,
 				54B5957A2048898D00AB4CAB /* Main.storyboard */,
 				54B5957D2048898D00AB4CAB /* Assets.xcassets */,
 				54B5957F2048898D00AB4CAB /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5453E12E205EF7C100294E28 /* SplitController.swift in Sources */,
 				54B3200A205889F300167E0D /* ViewController.swift in Sources */,
 				5453E12C205EDFC800294E28 /* MenuController.swift in Sources */,
 				54B595772048898D00AB4CAB /* AppDelegate.swift in Sources */,

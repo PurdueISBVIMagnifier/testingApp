@@ -4,12 +4,13 @@
 //  Created by Nicholas Rosato and Meriem Bounab on 3/1/18.
 //  Copyright © 2018 Purdue EPICS ISBVI Magnifier Software Team. All rights reserved.
 import UIKit
+import QuartzCore
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController
+{
     //IB INITIALIZATIONS
     @IBOutlet weak var webViewTest: UIWebView!
-    
+  
     
     
     override func viewDidLoad()
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
        
         //IP ADDRESSES USED
         //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
-        let url = NSURL (string: "http://128.211.222.119:8081/");
+        let url = NSURL (string: "http://128.46.121.195:8081/");
         
         //Makes http Request
         let request = NSURLRequest(url: url! as URL);
@@ -88,9 +89,11 @@ class ViewController: UIViewController {
         
         snapshotView.backgroundColor = UIColor.white
         
-        UIView.animate(withDuration: 0.6, animations:{
+        UIView.animate(withDuration: 0.6, animations:
+        {
             snapshotView.alpha = 0
-        }) { _ in
+        })
+        { _ in
             snapshotView.removeFromSuperview()
         }
     }

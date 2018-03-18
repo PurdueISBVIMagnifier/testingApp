@@ -28,8 +28,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0IO-At-IBI">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYP-w5-IYr">
-                                <rect key="frame" x="873" y="735" width="219" height="79"/>
+                                <rect key="frame" x="893" y="755" width="219" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.52933370756251041" green="0.90083783864974976" blue="0.89526442909425075" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="41"/>
@@ -127,6 +131,9 @@
                                 <state key="normal" title="Access Photos">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6sj-QG-mFo" kind="show" id="rge-YQ-OnN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-G2-3dj">
                                 <rect key="frame" x="371" y="0.0" width="371" height="418"/>
@@ -169,7 +176,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVI-vW-BbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586.51079136690646" y="139.56834532374103"/>
+            <point key="canvasLocation" x="676" y="130"/>
+        </scene>
+        <!--Split Controller-->
+        <scene sceneID="xXX-pE-907">
+            <objects>
+                <viewController id="6sj-QG-mFo" customClass="SplitController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3yk-MD-jq6">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLE-jS-08g">
+                                <rect key="frame" x="0.0" y="0.0" width="573" height="834"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-cp-IbN">
+                                <rect key="frame" x="581" y="0.0" width="531" height="834"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-fU-PQV">
+                                <rect key="frame" x="0.0" y="0.0" width="573" height="834"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Fs-AK-fWO"/>
+                    </view>
+                    <connections>
+                        <outlet property="splitImageView" destination="uyI-cp-IbN" id="Pfh-UD-fQV"/>
+                        <outlet property="splitWebView" destination="bLE-jS-08g" id="cOi-kL-LNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10o-nl-ahU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586.51079136690646" y="984.89208633093529"/>
         </scene>
     </scenes>
 </document>
