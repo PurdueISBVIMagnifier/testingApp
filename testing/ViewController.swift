@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
     
     
@@ -76,17 +76,19 @@ class ViewController: UIViewController {
         snapshotView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(snapshotView)
         
-        let constraints:[NSLayoutConstraint] = [
+        let constraints:[NSLayoutConstraint] =
+        [
             snapshotView.topAnchor.constraint(equalTo: view.topAnchor),
             snapshotView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             snapshotView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             snapshotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ]
+      
         NSLayoutConstraint.activate(constraints)
         
         snapshotView.backgroundColor = UIColor.white
         
-        UIView.animate(withDuration: 0.6, animations: {
+        UIView.animate(withDuration: 0.6, animations:{
             snapshotView.alpha = 0
         }) { _ in
             snapshotView.removeFromSuperview()

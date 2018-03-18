@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="-80.935251798561154" y="130.21582733812951"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu Controller-->
         <scene sceneID="1Ge-W7-g7v">
             <objects>
-                <viewController id="zH7-w1-LQj" sceneMemberID="viewController">
+                <viewController id="zH7-w1-LQj" customClass="MenuController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgs-0t-K5y">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +81,9 @@
                                 <state key="normal" title="Color Filtering">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="colorFiltersActivated:" destination="zH7-w1-LQj" eventType="touchUpInside" id="ela-8B-APg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4v-Ej-Mt3">
                                 <rect key="frame" x="742" y="0.0" width="371" height="418"/>
@@ -155,6 +158,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Kk5-nf-T7u"/>
                     </view>
+                    <connections>
+                        <outlet property="accessPhotosButton" destination="mdY-Bi-SpE" id="VLa-8f-z4d"/>
+                        <outlet property="colorFilterButton" destination="VJE-gP-vcu" id="y7q-UI-ana"/>
+                        <outlet property="helpButton" destination="ABM-a5-KW7" id="0bF-xh-tyv"/>
+                        <outlet property="mobileMagnifyButton" destination="ad6-G2-3dj" id="YZl-qx-fo5"/>
+                        <outlet property="returnButton" destination="ABM-a5-KW7" id="xvB-Ca-CeO"/>
+                        <outlet property="selectDeviceButton" destination="J4v-Ej-Mt3" id="b5m-G7-lEp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVI-vW-BbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
