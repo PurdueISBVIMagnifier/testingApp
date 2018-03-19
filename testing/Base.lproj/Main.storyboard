@@ -112,7 +112,7 @@
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Return">
+                                <state key="normal" title="Full Screen">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -160,6 +160,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="07p-PN-0oP" kind="show" id="Yu0-sA-CSM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -178,6 +181,35 @@
             </objects>
             <point key="canvasLocation" x="676" y="130"/>
         </scene>
+        <!--Help View-->
+        <scene sceneID="Yqs-tg-lc3">
+            <objects>
+                <viewController id="07p-PN-0oP" customClass="HelpView" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DnK-hi-L5h">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6G-e7-cgj">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cAs-Go-LQn"/>
+                    </view>
+                    <connections>
+                        <outlet property="helpWebView" destination="d6G-e7-cgj" id="sIU-CH-u60"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WE3-VX-HMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666.9064748201439" y="900.7194244604317"/>
+        </scene>
         <!--Split Controller-->
         <scene sceneID="xXX-pE-907">
             <objects>
@@ -194,6 +226,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-cp-IbN">
                                 <rect key="frame" x="581" y="0.0" width="531" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-fU-PQV">
                                 <rect key="frame" x="0.0" y="0.0" width="573" height="834"/>
@@ -201,6 +234,7 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="7Fs-AK-fWO"/>
                     </view>
                     <connections>
@@ -210,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10o-nl-ahU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586.51079136690646" y="984.89208633093529"/>
+            <point key="canvasLocation" x="1380" y="135"/>
         </scene>
     </scenes>
 </document>

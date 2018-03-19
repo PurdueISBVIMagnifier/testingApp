@@ -14,6 +14,8 @@
 		54B5957C2048898D00AB4CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B5957A2048898D00AB4CAB /* Main.storyboard */; };
 		54B5957E2048898D00AB4CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B5957D2048898D00AB4CAB /* Assets.xcassets */; };
 		54B595812048898D00AB4CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B5957F2048898D00AB4CAB /* LaunchScreen.storyboard */; };
+		54C9D504205F3CD00063C2D9 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9D503205F3CD00063C2D9 /* HelpView.swift */; };
+		54C9D506205F3D9A0063C2D9 /* testPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 54C9D505205F3D9A0063C2D9 /* testPDF.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		54B5957D2048898D00AB4CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54B595802048898D00AB4CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B595822048898D00AB4CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54C9D503205F3CD00063C2D9 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		54C9D505205F3D9A0063C2D9 /* testPDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testPDF.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		54B595752048898D00AB4CAB /* testing */ = {
 			isa = PBXGroup;
 			children = (
+				54C9D505205F3D9A0063C2D9 /* testPDF.pdf */,
+				54C9D503205F3CD00063C2D9 /* HelpView.swift */,
 				54B595762048898D00AB4CAB /* AppDelegate.swift */,
 				54B595782048898D00AB4CAB /* ViewController.swift */,
 				5453E12B205EDFC800294E28 /* MenuController.swift */,
@@ -130,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B595812048898D00AB4CAB /* LaunchScreen.storyboard in Resources */,
+				54C9D506205F3D9A0063C2D9 /* testPDF.pdf in Resources */,
 				54B5957E2048898D00AB4CAB /* Assets.xcassets in Resources */,
 				54B5957C2048898D00AB4CAB /* Main.storyboard in Resources */,
 			);
@@ -145,6 +152,7 @@
 				5453E12E205EF7C100294E28 /* SplitController.swift in Sources */,
 				54B3200A205889F300167E0D /* ViewController.swift in Sources */,
 				5453E12C205EDFC800294E28 /* MenuController.swift in Sources */,
+				54C9D504205F3CD00063C2D9 /* HelpView.swift in Sources */,
 				54B595772048898D00AB4CAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
