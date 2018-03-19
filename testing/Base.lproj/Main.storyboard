@@ -193,10 +193,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8XK-sc-0II" appends="YES" id="o39-JH-s7C"/>
+                                </connections>
                             </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,6 +211,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WE3-VX-HMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="8XK-sc-0II">
+                    <connections>
+                        <segue destination="zH7-w1-LQj" kind="show" id="gRx-SI-nvS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="666.9064748201439" y="900.7194244604317"/>
         </scene>
@@ -254,21 +263,8 @@
             </objects>
             <point key="canvasLocation" x="1379.6762589928057" y="134.53237410071944"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="09e-n8-q9M">
-            <objects>
-                <viewController id="iKX-C3-wdW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3k0-q9-9v2">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1gI-g7-H0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dGB-oX-1Nj"/>
+        <segue reference="gRx-SI-nvS"/>
     </inferredMetricsTieBreakers>
 </document>
