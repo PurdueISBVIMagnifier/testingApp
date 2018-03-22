@@ -12,6 +12,7 @@ import WebKit
 class HelpView: UIViewController {
   
   @IBOutlet weak var helpWebView: WKWebView!
+  @IBOutlet var hvTapGest: UITapGestureRecognizer!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,10 @@ class HelpView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+  @IBAction func hvGestPressed(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
+  
     /*
     // MARK: - Navigation
 

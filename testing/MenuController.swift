@@ -38,6 +38,9 @@ class MenuController: UIViewController
     UIApplication.shared.open(URL(string:"App-prefs:root=General&path=ACCESSIBILITY")!)
   }
   
+  @IBAction func returnToFS(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
   
     /*
     // MARK: - Navigation

@@ -15,6 +15,11 @@ class SplitController: UIViewController
   
   @IBOutlet weak var splitWebView: WKWebView!
   @IBOutlet weak var splitImageView: UIImageView!
+  @IBOutlet var leftGest: UITapGestureRecognizer!
+  @IBOutlet var rightGest: UITapGestureRecognizer!
+  @IBOutlet var mainGest: UITapGestureRecognizer!
+  
+  
   
   override func viewDidLoad()
   {
@@ -39,9 +44,18 @@ class SplitController: UIViewController
         super.didReceiveMemoryWarning()
       
     }
-    
 
- 
+  @IBAction func leftGestAct(_ sender: UITapGestureRecognizer) {
+    self.dismiss(animated: true, completion: nil)
+  }
+  
+  @IBAction func rightGestAct(_ sender: UITapGestureRecognizer) {
+    self.dismiss(animated: true, completion: nil)
+  }
+  @IBAction func mainGestAct(_ sender: UITapGestureRecognizer) {
+    self.dismiss(animated: true, completion: nil)
+  }
+  
   /*
    // MARK: - Navigation
    
