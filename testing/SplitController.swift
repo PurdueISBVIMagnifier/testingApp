@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import WebKit
 
 class SplitController: UIViewController
 {
   //IB INITIALIZATIONS
-  @IBOutlet weak var splitWebView: UIWebView!
+  
+  @IBOutlet weak var splitWebView: WKWebView!
   @IBOutlet weak var splitImageView: UIImageView!
   
   override func viewDidLoad()
@@ -27,7 +29,7 @@ class SplitController: UIViewController
     let request = NSURLRequest(url: url! as URL);
     
     //Loads http request into webView on application
-    splitWebView.loadRequest(request as URLRequest);
+    splitWebView.load(request as URLRequest);
 
     
     }
