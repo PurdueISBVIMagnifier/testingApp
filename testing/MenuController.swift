@@ -21,14 +21,11 @@ class MenuController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-      
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-       
     }
     
 
@@ -38,7 +35,8 @@ class MenuController: UIViewController
     UIApplication.shared.open(URL(string:"App-prefs:root=General&path=ACCESSIBILITY")!)
   }
   
-  @IBAction func returnToFS(_ sender: Any) {
+  @IBAction func returnToFS(_ sender: Any)
+  {
     self.dismiss(animated: true, completion: nil)
   }
   

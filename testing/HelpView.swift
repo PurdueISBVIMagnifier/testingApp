@@ -9,27 +9,31 @@
 import UIKit
 import WebKit
 
-class HelpView: UIViewController {
-  
+class HelpView: UIViewController
+{
+  //IB INITIALIZATIONS
   @IBOutlet weak var helpWebView: WKWebView!
   @IBOutlet var hvTapGest: UITapGestureRecognizer!
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad()
+  {
+    super.viewDidLoad()
 
-      let path = Bundle.main.path(forResource: "testPDF", ofType: "pdf")
-      let url = URL(fileURLWithPath: path!)
-      let request = URLRequest(url: url)
-      helpWebView.load(request)
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
+    //IP STREAM TO SPLIT VIEW
+    let path = Bundle.main.path(forResource: "testPDF", ofType: "pdf")
+    let url = URL(fileURLWithPath: path!)
+    let request = URLRequest(url: url)
+    helpWebView.load(request)
+  }
+  
+  override func didReceiveMemoryWarning()
+  {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-  @IBAction func hvGestPressed(_ sender: Any) {
+  }
+  
+  //TRIPLE TAP THE SCREEN TO DISMISS THE VIEW CONTROLLER
+  @IBAction func hvGestPressed(_ sender: Any)
+  {
     self.dismiss(animated: true, completion: nil)
   }
   
