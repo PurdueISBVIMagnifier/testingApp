@@ -4,12 +4,13 @@
 //  Created by Nicholas Rosato and Meriem Bounab on 3/1/18.
 //  Copyright © 2018 Purdue EPICS ISBVI Magnifier Software Team. All rights reserved.
 import UIKit
-import QuartzCore
+import WebKit
+
 
 class ViewController: UIViewController
 {
     //IB INITIALIZATIONS
-    @IBOutlet weak var webViewTest: UIWebView!
+      @IBOutlet weak var webViewTest: WKWebView!
   
     
     
@@ -21,13 +22,13 @@ class ViewController: UIViewController
        
         //IP ADDRESSES USED
         //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
-        let url = NSURL (string: "http://128.46.121.195:8081/");
+        let url = NSURL (string: "");
         
         //Makes http Request
         let request = NSURLRequest(url: url! as URL);
         
         //Loads http request into webView on application
-        webViewTest.loadRequest(request as URLRequest);
+        webViewTest.load(request as URLRequest);
     }
 
     override func didReceiveMemoryWarning()
