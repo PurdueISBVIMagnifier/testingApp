@@ -46,6 +46,7 @@
                                 </state>
                                 <connections>
                                     <action selector="takeScreenshot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nt9-BE-tQZ"/>
+                                    <segue destination="6sj-QG-mFo" kind="show" identifier="screenShotToSV" id="cSm-hL-He6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +67,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-312" y="144"/>
+            <point key="canvasLocation" x="-312.41007194244605" y="143.88489208633095"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="1Ge-W7-g7v">
@@ -288,4 +289,7 @@
             <point key="canvasLocation" x="1549" y="144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cSm-hL-He6"/>
+    </inferredMetricsTieBreakers>
 </document>
