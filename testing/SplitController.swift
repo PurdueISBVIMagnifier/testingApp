@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class SplitController: UIViewController
+class SplitController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate
 {
   //VAR INITIALIZATIONS
   var sSImage : UIImage?
@@ -20,6 +20,7 @@ class SplitController: UIViewController
   @IBOutlet var leftGest: UITapGestureRecognizer!
   @IBOutlet var rightGest: UITapGestureRecognizer!
   @IBOutlet var mainGest: UITapGestureRecognizer!
+  @IBOutlet weak var accessPhotosButton: UIButton!
   
   override func viewDidLoad()
   {
@@ -27,7 +28,7 @@ class SplitController: UIViewController
     
     if sSImage != nil
     {
-      print("Image is there")
+      //print("Image is there")
       splitImageView.image = sSImage
     }
     //Sets URL string
@@ -61,6 +62,28 @@ class SplitController: UIViewController
   
   @IBAction func mainGestAct(_ sender: UITapGestureRecognizer)
   {
+    self.dismiss(animated: true, completion: nil)
+  }
+  
+  @IBAction func accessPhotosPressed(_ sender: Any)
+  {
+    let image = UIImagePickerController()
+    image.delegate = self
+    image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+    image.allowsEditing = false
+    self.present(image, animated: true, completion: nil)
+  }
+  
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+  {
+    if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    {
+      splitImageView.image = image
+    }
+    else
+    {
+      //Display Error Message
+    }
     self.dismiss(animated: true, completion: nil)
   }
   

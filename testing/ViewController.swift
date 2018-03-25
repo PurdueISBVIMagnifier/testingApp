@@ -20,7 +20,6 @@ class ViewController: UIViewController
   override func viewDidLoad()
   {
     super.viewDidLoad()
-        
     //IP STREAM TO VIEW CONTROLLER
     //IP ADDRESSES USED
     //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
