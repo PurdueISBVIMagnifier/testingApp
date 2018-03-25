@@ -28,6 +28,12 @@ class MenuController: UIViewController
         super.didReceiveMemoryWarning()
     }
     
+  @IBAction func mobileMagnifyPressed(_ sender: Any)
+  {
+    //OPENS UP SETTINGS IN THE APPLICATION AUTOMATICALLY
+    UIApplication.shared.open(URL(string:"App-prefs:root=General&path=ACCESSIBILITY")!)
+  }
+  
 
   @IBAction func colorFiltersActivated(_ sender: Any)
   {

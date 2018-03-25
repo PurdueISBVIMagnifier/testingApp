@@ -151,6 +151,9 @@
                                 <state key="normal" title="Mobile Magnify">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="mobileMagnifyPressed:" destination="zH7-w1-LQj" eventType="touchUpInside" id="pnS-zh-LaV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJe-gV-tZg">
                                 <rect key="frame" x="371" y="418" width="371" height="418"/>
@@ -302,6 +305,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cSm-hL-He6"/>
+        <segue reference="9dc-PF-T9Z"/>
     </inferredMetricsTieBreakers>
 </document>
