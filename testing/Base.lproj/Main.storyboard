@@ -69,6 +69,43 @@
             </objects>
             <point key="canvasLocation" x="-312.41007194244605" y="143.88489208633095"/>
         </scene>
+        <!--Select Device Controller-->
+        <scene sceneID="Dqt-X5-5lB">
+            <objects>
+                <viewController id="Jv2-s6-JBe" customClass="SelectDeviceController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VyI-V5-0GJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wq-C1-DG3">
+                                <rect key="frame" x="328" y="298" width="422" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="Uam-5O-vKP"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fBG-ck-Duv" appends="YES" id="0eM-Bv-Jn7"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="iPLabel" destination="0wq-C1-DG3" id="dOD-a6-AHF"/>
+                        <outlet property="sDGestRec" destination="fBG-ck-Duv" id="UCN-Vs-wQU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7o-9g-4xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fBG-ck-Duv">
+                    <connections>
+                        <action selector="tripleTapHappened:" destination="Jv2-s6-JBe" id="o8a-dg-dRs"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="711.69064748201436" y="-785.61151079136698"/>
+        </scene>
         <!--Menu Controller-->
         <scene sceneID="1Ge-W7-g7v">
             <objects>
@@ -105,6 +142,10 @@
                                 <state key="normal" title="Select Device">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectDevicePressed:" destination="zH7-w1-LQj" eventType="touchUpInside" id="r5C-8O-3kw"/>
+                                    <segue destination="Jv2-s6-JBe" kind="show" identifier="segueToDevice" id="wBc-3T-UfF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABM-a5-KW7">
                                 <rect key="frame" x="742" y="418" width="371" height="418"/>
