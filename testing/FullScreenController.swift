@@ -6,7 +6,6 @@
 import UIKit
 import WebKit
 
-
 class FullScreenController: UIViewController
 {
   //VAR INITIALIZATIONS
@@ -16,6 +15,7 @@ class FullScreenController: UIViewController
   //IB INITIALIZATIONS
   @IBOutlet weak var webViewTest: WKWebView!
   @IBOutlet var vcTripleTapGest: UITapGestureRecognizer!
+  @IBOutlet weak var menuButton: UIButton!
   
   override func viewDidLoad()
   {
@@ -23,9 +23,9 @@ class FullScreenController: UIViewController
     //IP STREAM TO VIEW CONTROLLER
     //IP ADDRESSES USED
     //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
-    let url = NSURL (string: "https://www.google.com/search?q=cool+pics&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiU35b_kIjaAhUo9IMKHUTMDP8Q_AUICigB&biw=1440&bih=826")
+    let url = NSURL (string: "http://128.46.121.195:8081")
     
-    urlString = "https://www.google.com/search?q=cool+pics&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiU35b_kIjaAhUo9IMKHUTMDP8Q_AUICigB&biw=1440&bih=826"
+    urlString = "http://www.hd-freewallpapers.com/beautiful-images-of-parrots-wallpaper/"
     //Makes http Request
     let request = NSURLRequest(url: url! as URL);
         
@@ -97,8 +97,6 @@ class FullScreenController: UIViewController
      performSegue(withIdentifier: "vcToMenu", sender: self)
    }
   
-
-    
   
   //PASSES THE SCREENSHOT TO THE OTHER VIEW CONTROLLER
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -126,6 +124,14 @@ class FullScreenController: UIViewController
     }
     
   }
+  
+  @IBAction func menuButtonPressed(_ sender: Any)
+  {
+    performSegue(withIdentifier: "vcToMenu", sender: self)
+  }
+  
+  
+
   
 }
 

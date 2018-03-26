@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="MyanmarSangamMN.ttc">
             <string>MyanmarSangamMN-Bold</string>
         </array>
@@ -52,12 +55,23 @@
                                     <segue destination="6sj-QG-mFo" kind="show" identifier="screenShotToSV" id="cSm-hL-He6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-MT-Spc">
+                                <rect key="frame" x="0.0" y="760" width="199" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50300721609999999" green="0.98407545230000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyP-p4-GJi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="menuButton" destination="Cqk-MT-Spc" id="Hop-QR-mxm"/>
                         <outlet property="vcTripleTapGest" destination="jRf-JW-zwb" id="M9Y-OM-KW9"/>
                         <outlet property="webViewTest" destination="W6W-t1-EU9" id="pJI-KZ-Rn8"/>
                         <segue destination="zH7-w1-LQj" kind="show" identifier="vcToMenu" id="z14-VN-9nl"/>
@@ -279,8 +293,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-cp-IbN">
+                                <rect key="frame" x="567" y="0.0" width="545" height="834"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZNl-kT-58h" appends="YES" id="MEb-1G-nHZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="1OW-VN-Ksw" appends="YES" id="vH5-Vj-f3z"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oQ-tG-WOE">
+                                <rect key="frame" x="918" y="7" width="183" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50300721609999999" green="0.98407545230000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Access Photos">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="accessPhotosPressed:" destination="6sj-QG-mFo" eventType="touchUpInside" id="Spy-7Z-ohU"/>
+                                </connections>
+                            </button>
                             <wkWebView contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iz7-Uu-D2C">
-                                <rect key="frame" x="0.0" y="0.0" width="573" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="559" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -292,25 +326,6 @@
                                     <outletCollection property="gestureRecognizers" destination="bWT-9R-glB" appends="YES" id="Upj-Er-mgC"/>
                                 </connections>
                             </wkWebView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-cp-IbN">
-                                <rect key="frame" x="581" y="0.0" width="531" height="834"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ZNl-kT-58h" appends="YES" id="MEb-1G-nHZ"/>
-                                </connections>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oQ-tG-WOE">
-                                <rect key="frame" x="973" y="7" width="128" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.50300721609999999" green="0.98407545230000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Access Photos">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="accessPhotosPressed:" destination="6sj-QG-mFo" eventType="touchUpInside" id="Spy-7Z-ohU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -323,6 +338,7 @@
                         <outlet property="accessPhotosButton" destination="5oQ-tG-WOE" id="Dn0-Ed-0Lc"/>
                         <outlet property="leftGest" destination="bWT-9R-glB" id="zYZ-2S-oVV"/>
                         <outlet property="mainGest" destination="DwC-KH-oG8" id="kpS-f7-g3T"/>
+                        <outlet property="pinchGest" destination="1OW-VN-Ksw" id="qBF-5S-UfZ"/>
                         <outlet property="rightGest" destination="ZNl-kT-58h" id="LSf-YQ-ier"/>
                         <outlet property="splitImageView" destination="uyI-cp-IbN" id="Pfh-UD-fQV"/>
                         <outlet property="splitWebView" destination="Iz7-Uu-D2C" id="dus-1T-DN3"/>
@@ -334,7 +350,7 @@
                         <action selector="leftGestAct:" destination="6sj-QG-mFo" id="H8G-S5-Rkc"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="ZNl-kT-58h">
+                <tapGestureRecognizer numberOfTapsRequired="3" id="ZNl-kT-58h">
                     <connections>
                         <action selector="rightGestAct:" destination="6sj-QG-mFo" id="bX9-CU-dEM"/>
                     </connections>
@@ -344,11 +360,16 @@
                         <action selector="mainGestAct:" destination="6sj-QG-mFo" id="MtF-5Y-fSQ"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pinchGestureRecognizer id="1OW-VN-Ksw">
+                    <connections>
+                        <action selector="pinchHappened:" destination="6sj-QG-mFo" id="fgG-nm-raL"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1548.5611510791368" y="143.88489208633095"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9dc-PF-T9Z"/>
+        <segue reference="cSm-hL-He6"/>
     </inferredMetricsTieBreakers>
 </document>

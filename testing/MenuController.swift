@@ -51,7 +51,7 @@ class MenuController: UIViewController
   
   @IBAction func selectDevicePressed(_ sender: Any)
   {
-    
+  
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

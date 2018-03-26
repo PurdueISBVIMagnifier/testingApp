@@ -21,6 +21,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   @IBOutlet var rightGest: UITapGestureRecognizer!
   @IBOutlet var mainGest: UITapGestureRecognizer!
   @IBOutlet weak var accessPhotosButton: UIButton!
+  @IBOutlet var pinchGest: UIPinchGestureRecognizer!
   
   override func viewDidLoad()
   {
@@ -34,7 +35,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
     //Sets URL string
     //IP ADDRESSES USED
     //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
-    let url = NSURL (string: "https://twitter.com/")
+    let url = NSURL (string: "http://128.46.121.195:8081")
     
     //Makes http Request
     let request = NSURLRequest(url: url! as URL)
@@ -85,6 +86,12 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
       //Display Error Message
     }
     self.dismiss(animated: true, completion: nil)
+  }
+  
+  //DIGITAL ZOOM ON IMAGE
+  @IBAction func pinchHappened(_ sender: UIPinchGestureRecognizer)
+  {
+      splitImageView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
   }
   
   /*
