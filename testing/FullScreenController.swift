@@ -7,7 +7,7 @@ import UIKit
 import WebKit
 
 
-class ViewController: UIViewController
+class FullScreenController: UIViewController
 {
   //VAR INITIALIZATIONS
   var screenShot: UIImage? //Screenshot from the screenshot button
