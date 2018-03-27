@@ -4,7 +4,7 @@
 //
 //  Created by Nicholas Rosato on 3/18/18.
 //  Copyright © 2018 Nick Rosato. All rights reserved.
-//
+
 
 import UIKit
 import WebKit
@@ -26,7 +26,18 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
+   
+    pageImageLoad()
+   
+  }
+
+  override func didReceiveMemoryWarning()
+  {
+    super.didReceiveMemoryWarning()
+  }
+
+  func pageImageLoad()
+  {
     if sSImage != nil
     {
       //print("Image is there")
@@ -42,15 +53,9 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
     
     //Loads http request into webView on application
     splitWebView.load(request as URLRequest)
-    
-   
   }
-
-  override func didReceiveMemoryWarning()
-  {
-    super.didReceiveMemoryWarning()
-  }
-
+  
+  //DISMISS CODES FOR GESTURES
   @IBAction func leftGestAct(_ sender: UITapGestureRecognizer)
   {
     self.dismiss(animated: true, completion: nil)
@@ -77,20 +82,22 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
   {
+    //UNWRAPS THE OPTION UIIMAGE VALUE
     if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
     {
       splitImageView.image = image
     }
-    else
-    {
+    //else
+    //{
       //Display Error Message
-    }
+    //}
     self.dismiss(animated: true, completion: nil)
   }
   
   //DIGITAL ZOOM ON IMAGE
   @IBAction func pinchHappened(_ sender: UIPinchGestureRecognizer)
   {
+      //USES CGAZOOM TO ZOOM BASED ON PINCH
       splitImageView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
   }
   
