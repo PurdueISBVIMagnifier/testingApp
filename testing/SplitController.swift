@@ -18,9 +18,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   //IB INITIALIZATIONS
   @IBOutlet weak var splitWebView: WKWebView!
   @IBOutlet weak var splitImageView: UIImageView!
-  @IBOutlet var leftGest: UITapGestureRecognizer!
-  @IBOutlet var rightGest: UITapGestureRecognizer!
-  @IBOutlet var mainGest: UITapGestureRecognizer!
+  @IBOutlet weak var returnButton: UIButton!
   @IBOutlet weak var accessPhotosButton: UIButton!
   @IBOutlet var pinchGest: UIPinchGestureRecognizer!
   
@@ -56,22 +54,6 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
     splitWebView.load(request as URLRequest)
   }
   
-  //DISMISS CODES FOR GESTURES
-  @IBAction func leftGestAct(_ sender: UITapGestureRecognizer)
-  {
-    self.dismiss(animated: true, completion: nil)
-  }
-  
-  @IBAction func rightGestAct(_ sender: UITapGestureRecognizer)
-  {
-    self.dismiss(animated: true, completion: nil)
-  }
-  
-  @IBAction func mainGestAct(_ sender: UITapGestureRecognizer)
-  {
-    self.dismiss(animated: true, completion: nil)
-  }
-  
   @IBAction func accessPhotosPressed(_ sender: Any)
   {
     let image = UIImagePickerController()
@@ -100,6 +82,12 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   {
       //USES CGAZOOM TO ZOOM BASED ON PINCH
       splitImageView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+  }
+  
+  //DISMISS CODE
+  @IBAction func returnBPressed(_ sender: Any)
+  {
+     self.dismiss(animated: true, completion: nil)
   }
   
   /*

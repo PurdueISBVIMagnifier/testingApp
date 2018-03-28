@@ -10,7 +10,7 @@ import UIKit
 
 class SelectDeviceController: UIViewController {
   //IB INITIALIZATIONS
-  @IBOutlet var sDGestRec: UITapGestureRecognizer!
+  @IBOutlet weak var returnButton: UIButton!
   @IBOutlet weak var iPLabel: UILabel!
   
   //VAR INITIALIZATIONS
@@ -31,8 +31,9 @@ class SelectDeviceController: UIViewController {
         super.didReceiveMemoryWarning()
       
     }
-    
-  @IBAction func tripleTapHappened(_ sender: UITapGestureRecognizer)
+  
+  
+  @IBAction func returnPressed(_ sender: Any)
   {
     self.dismiss(animated: true, completion: nil)
   }

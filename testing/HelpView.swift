@@ -13,7 +13,7 @@ class HelpView: UIViewController
 {
   //IB INITIALIZATIONS
   @IBOutlet weak var helpWebView: WKWebView!
-  @IBOutlet var hvTapGest: UITapGestureRecognizer!
+  @IBOutlet weak var returnButton: UIButton!
   
   override func viewDidLoad()
   {
@@ -31,13 +31,13 @@ class HelpView: UIViewController
         super.didReceiveMemoryWarning()
   }
   
-  //TRIPLE TAP THE SCREEN TO DISMISS THE VIEW CONTROLLER
-  @IBAction func hvGestPressed(_ sender: Any)
+
+  //RETURN BUTTON PRESSED
+  @IBAction func returnButtonPressed(_ sender: Any)
   {
     self.dismiss(animated: true, completion: nil)
   }
-  
-    /*
+  /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
