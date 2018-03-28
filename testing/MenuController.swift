@@ -60,6 +60,12 @@ class MenuController: UIViewController
       let destinationVC = segue.destination as! SelectDeviceController
       destinationVC.labelText = ipText
     }
+    
+    if segue.identifier == "menuToSV"
+    {
+      let destinationVC = segue.destination as! SplitController
+      destinationVC.urlText = ipText
+    }
   }
   /*
     // MARK: - Navigation

@@ -13,6 +13,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
 {
   //VAR INITIALIZATIONS
   var sSImage : UIImage?
+  var urlText : String?
   
   //IB INITIALIZATIONS
   @IBOutlet weak var splitWebView: WKWebView!
@@ -46,7 +47,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
     //Sets URL string
     //IP ADDRESSES USED
     //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
-    let url = NSURL (string: "http://128.46.121.195:8081")
+    let url = NSURL (string: urlText!)
     
     //Makes http Request
     let request = NSURLRequest(url: url! as URL)

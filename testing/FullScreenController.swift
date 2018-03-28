@@ -69,8 +69,7 @@ class FullScreenController: UIViewController
    UIImageWriteToSavedPhotosAlbum(screenShot!, nil, nil, nil)
   
  }
-    
- 
+  
   //Animation for Screen Shot
   func showScreenshotEffect()
   {
@@ -124,12 +123,15 @@ class FullScreenController: UIViewController
       
       let destinationVC = segue.destination as! SplitController
       destinationVC.sSImage = screenShot
+      destinationVC.urlText = urlString
     }
+    
     if segue.identifier == "vcToMenu"
     {
       let destinationVC = segue.destination as! MenuController
       destinationVC.ipText = urlString
     }
+    
     
   }
   
