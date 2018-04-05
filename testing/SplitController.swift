@@ -21,6 +21,8 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   @IBOutlet weak var returnButton: UIButton!
   @IBOutlet weak var accessPhotosButton: UIButton!
   @IBOutlet weak var scroll: UIScrollView!
+  @IBOutlet var doubleTapGest: UITapGestureRecognizer!
+  
   
   override func viewDidLoad()
   {
@@ -88,6 +90,23 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   {
     return splitImageView
   }
+  
+ 
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  {
+    if segue.identifier == "halfToFull"
+    {
+      let destinationVC = segue.destination as! FullImageController
+      destinationVC.image = sSImage
+    }
+  }
+  
+  @IBAction func doubleTapHappened(_ sender: UITapGestureRecognizer)
+  {
+     performSegue(withIdentifier: "halfToFull", sender: self)
+  }
+  
   /*
    // MARK: - Navigation
    

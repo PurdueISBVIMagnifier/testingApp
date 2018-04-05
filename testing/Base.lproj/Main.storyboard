@@ -339,6 +339,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="545" id="Kuy-rg-NOf"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Tda-sG-ZsM" appends="YES" id="JIR-yC-MXJ"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -367,15 +370,80 @@
                     </view>
                     <connections>
                         <outlet property="accessPhotosButton" destination="5oQ-tG-WOE" id="Dn0-Ed-0Lc"/>
+                        <outlet property="doubleTapGest" destination="Tda-sG-ZsM" id="Ym4-8h-y32"/>
                         <outlet property="returnButton" destination="jmK-xm-fZI" id="NOT-nM-X0M"/>
                         <outlet property="scroll" destination="gMi-VN-LBK" id="6z5-G6-6Ie"/>
                         <outlet property="splitImageView" destination="uyI-cp-IbN" id="Pfh-UD-fQV"/>
                         <outlet property="splitWebView" destination="Iz7-Uu-D2C" id="dus-1T-DN3"/>
+                        <segue destination="lXN-FM-wgd" kind="show" identifier="halfToFull" id="H85-Np-222"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10o-nl-ahU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Tda-sG-ZsM">
+                    <connections>
+                        <action selector="doubleTapHappened:" destination="6sj-QG-mFo" id="N5o-0i-4Ut"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1548.5611510791368" y="143.88489208633095"/>
+        </scene>
+        <!--Full Image Controller-->
+        <scene sceneID="vZ0-8J-pUK">
+            <objects>
+                <viewController id="lXN-FM-wgd" customClass="FullImageController" customModule="testing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZ3-oc-hXD">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="100" translatesAutoresizingMaskIntoConstraints="NO" id="ygS-y3-ujG">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9pP-LU-N3S">
+                                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0G-f7-FeB">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.1070858096" blue="0.19910899970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="41"/>
+                                        <state key="normal" title="Return">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="returnPressed:" destination="lXN-FM-wgd" eventType="touchUpInside" id="YjC-iq-IRV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9pP-LU-N3S" secondAttribute="bottom" id="5DE-7F-Ubw"/>
+                                    <constraint firstItem="9pP-LU-N3S" firstAttribute="leading" secondItem="ygS-y3-ujG" secondAttribute="leading" id="bHK-7U-JxM"/>
+                                    <constraint firstAttribute="trailing" secondItem="9pP-LU-N3S" secondAttribute="trailing" id="f7E-Dc-EZn"/>
+                                    <constraint firstItem="9pP-LU-N3S" firstAttribute="centerY" secondItem="ygS-y3-ujG" secondAttribute="centerY" id="j4s-8y-hT9"/>
+                                    <constraint firstItem="9pP-LU-N3S" firstAttribute="top" secondItem="ygS-y3-ujG" secondAttribute="top" id="mEe-qZ-aJr"/>
+                                    <constraint firstItem="9pP-LU-N3S" firstAttribute="centerX" secondItem="ygS-y3-ujG" secondAttribute="centerX" id="pMW-gj-YEQ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ygS-y3-ujG" firstAttribute="bottom" secondItem="T7U-fE-udy" secondAttribute="bottom" id="6qb-NI-yp8"/>
+                            <constraint firstItem="ygS-y3-ujG" firstAttribute="leading" secondItem="T7U-fE-udy" secondAttribute="leading" id="DK7-kJ-yCd"/>
+                            <constraint firstItem="ygS-y3-ujG" firstAttribute="centerY" secondItem="XZ3-oc-hXD" secondAttribute="centerY" id="JBq-Zu-LDM"/>
+                            <constraint firstItem="ygS-y3-ujG" firstAttribute="trailing" secondItem="T7U-fE-udy" secondAttribute="trailing" id="ajS-MD-tpn"/>
+                            <constraint firstItem="ygS-y3-ujG" firstAttribute="centerX" secondItem="XZ3-oc-hXD" secondAttribute="centerX" id="dna-OG-dsl"/>
+                            <constraint firstItem="ygS-y3-ujG" firstAttribute="top" secondItem="XZ3-oc-hXD" secondAttribute="top" id="ic2-ih-uF3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T7U-fE-udy"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9pP-LU-N3S" id="TKB-QW-VmM"/>
+                        <outlet property="returnButton" destination="M0G-f7-FeB" id="YcE-QL-zWw"/>
+                        <outlet property="scroll" destination="ygS-y3-ujG" id="8Kd-vq-9zm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCj-J3-HW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571.7625899280577" y="958.99280575539581"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
