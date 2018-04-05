@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MyanmarSangamMN.ttc">
-            <string>MyanmarSangamMN-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Full Screen Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -302,17 +297,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-cp-IbN">
-                                <rect key="frame" x="567" y="0.0" width="545" height="834"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1OW-VN-Ksw" appends="YES" id="vH5-Vj-f3z"/>
-                                </connections>
-                            </imageView>
-                            <wkWebView contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iz7-Uu-D2C">
-                                <rect key="frame" x="0.0" y="0.0" width="559" height="834"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iz7-Uu-D2C">
+                                <rect key="frame" x="0.0" y="0.0" width="567" height="834"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <wkWebViewConfiguration key="configuration">
@@ -344,30 +330,55 @@
                                     <action selector="accessPhotosPressed:" destination="6sj-QG-mFo" eventType="touchUpInside" id="Spy-7Z-ohU"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="100" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-VN-LBK">
+                                <rect key="frame" x="567" y="0.0" width="545" height="834"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-cp-IbN">
+                                        <rect key="frame" x="0.0" y="0.0" width="545" height="834"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="545" id="Kuy-rg-NOf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uyI-cp-IbN" firstAttribute="centerX" secondItem="gMi-VN-LBK" secondAttribute="centerX" id="1mg-DQ-BWr"/>
+                                    <constraint firstItem="uyI-cp-IbN" firstAttribute="leading" secondItem="gMi-VN-LBK" secondAttribute="leading" id="3hD-oT-fFw"/>
+                                    <constraint firstAttribute="trailing" secondItem="uyI-cp-IbN" secondAttribute="trailing" id="3kZ-2O-ZYu"/>
+                                    <constraint firstItem="uyI-cp-IbN" firstAttribute="top" secondItem="gMi-VN-LBK" secondAttribute="top" id="Xm2-ta-tb6"/>
+                                    <constraint firstItem="uyI-cp-IbN" firstAttribute="centerY" secondItem="gMi-VN-LBK" secondAttribute="centerY" id="i0Y-XE-gMp"/>
+                                    <constraint firstAttribute="bottom" secondItem="uyI-cp-IbN" secondAttribute="bottom" id="xLL-XS-fzL"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Iz7-Uu-D2C" firstAttribute="top" secondItem="3yk-MD-jq6" secondAttribute="top" id="7bG-uN-pHC"/>
+                            <constraint firstItem="Iz7-Uu-D2C" firstAttribute="centerY" secondItem="3yk-MD-jq6" secondAttribute="centerY" id="Coo-E0-y66"/>
+                            <constraint firstItem="gMi-VN-LBK" firstAttribute="top" secondItem="3yk-MD-jq6" secondAttribute="top" id="PtX-4v-wLG"/>
+                            <constraint firstItem="gMi-VN-LBK" firstAttribute="bottom" secondItem="7Fs-AK-fWO" secondAttribute="bottom" id="T3F-RV-64G"/>
+                            <constraint firstItem="gMi-VN-LBK" firstAttribute="trailing" secondItem="7Fs-AK-fWO" secondAttribute="trailing" id="XTK-qu-fNY"/>
+                            <constraint firstItem="Iz7-Uu-D2C" firstAttribute="leading" secondItem="7Fs-AK-fWO" secondAttribute="leading" id="dBt-Mp-63b"/>
+                            <constraint firstItem="gMi-VN-LBK" firstAttribute="leading" secondItem="Iz7-Uu-D2C" secondAttribute="trailing" id="keA-hC-jxi"/>
+                            <constraint firstItem="Iz7-Uu-D2C" firstAttribute="bottom" secondItem="7Fs-AK-fWO" secondAttribute="bottom" id="vnK-WI-yPp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7Fs-AK-fWO"/>
                     </view>
                     <connections>
                         <outlet property="accessPhotosButton" destination="5oQ-tG-WOE" id="Dn0-Ed-0Lc"/>
-                        <outlet property="pinchGest" destination="1OW-VN-Ksw" id="qBF-5S-UfZ"/>
                         <outlet property="returnButton" destination="jmK-xm-fZI" id="NOT-nM-X0M"/>
+                        <outlet property="scroll" destination="gMi-VN-LBK" id="6z5-G6-6Ie"/>
                         <outlet property="splitImageView" destination="uyI-cp-IbN" id="Pfh-UD-fQV"/>
                         <outlet property="splitWebView" destination="Iz7-Uu-D2C" id="dus-1T-DN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10o-nl-ahU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="1OW-VN-Ksw">
-                    <connections>
-                        <action selector="pinchHappened:" destination="6sj-QG-mFo" id="fgG-nm-raL"/>
-                    </connections>
-                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1548.5611510791368" y="143.88489208633095"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cSm-hL-He6"/>
+        <segue reference="9dc-PF-T9Z"/>
     </inferredMetricsTieBreakers>
 </document>

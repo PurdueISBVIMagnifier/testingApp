@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class SplitController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate
+class SplitController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate
 {
   //VAR INITIALIZATIONS
   var sSImage : UIImage?
@@ -20,7 +20,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   @IBOutlet weak var splitImageView: UIImageView!
   @IBOutlet weak var returnButton: UIButton!
   @IBOutlet weak var accessPhotosButton: UIButton!
-  @IBOutlet var pinchGest: UIPinchGestureRecognizer!
+  @IBOutlet weak var scroll: UIScrollView!
   
   override func viewDidLoad()
   {
@@ -39,7 +39,8 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   {
     if sSImage != nil
     {
-      //print("Image is there")
+      scroll.delegate = self
+    
       splitImageView.image = sSImage
     }
     //Sets URL string
@@ -77,19 +78,16 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
     self.dismiss(animated: true, completion: nil)
   }
   
-  //DIGITAL ZOOM ON IMAGE
-  @IBAction func pinchHappened(_ sender: UIPinchGestureRecognizer)
-  {
-      //USES CGAZOOM TO ZOOM BASED ON PINCH
-      splitImageView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
-  }
-  
   //DISMISS CODE
   @IBAction func returnBPressed(_ sender: Any)
   {
      self.dismiss(animated: true, completion: nil)
   }
   
+  func viewForZooming(in scrollView: UIScrollView) -> UIView?
+  {
+    return splitImageView
+  }
   /*
    // MARK: - Navigation
    
