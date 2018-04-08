@@ -11,8 +11,6 @@ import UIKit
 class MenuController: UIViewController
 {
   //IB INITIALIZATIONS
-  @IBOutlet weak var colorFilterButton: UIButton!
-  @IBOutlet weak var mobileMagnifyButton: UIButton!
   @IBOutlet weak var selectDeviceButton: UIButton!
   @IBOutlet weak var accessPhotosButton: UIButton!
   @IBOutlet weak var helpButton: UIButton!
@@ -31,18 +29,7 @@ class MenuController: UIViewController
         super.didReceiveMemoryWarning()
     }
     
-  @IBAction func mobileMagnifyPressed(_ sender: Any)
-  {
-    //OPENS UP SETTINGS IN THE APPLICATION AUTOMATICALLY
-    UIApplication.shared.open(URL(string:"App-prefs:root=General&path=ACCESSIBILITY")!)
-  }
-  
-
-  @IBAction func colorFiltersActivated(_ sender: Any)
-  {
-    //OPENS UP SETTINGS IN THE APPLICATION AUTOMATICALLY
-    UIApplication.shared.open(URL(string:"App-prefs:root=General&path=ACCESSIBILITY")!)
-  }
+ 
   
   @IBAction func returnToFS(_ sender: Any)
   {
