@@ -15,7 +15,8 @@ class FullScreenController: UIViewController
   //IB INITIALIZATIONS
   @IBOutlet weak var webViewTest: WKWebView!
   @IBOutlet weak var menuButton: UIButton!
- 
+  @IBOutlet weak var webButton: UIButton!
+  
   
   override func viewDidLoad()
   {
@@ -36,7 +37,14 @@ class FullScreenController: UIViewController
     //IP ADDRESSES USED
     //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
     urlString = "http://www.wtamu.edu/academic/anns/mps/math/mathlab/col_algebra/col_alg_tut36_longdiv.htm"
-    let url = NSURL (string: urlString!)
+    
+    loadURL(urlString: urlString!)
+    
+  }
+  
+  func loadURL(urlString : String)
+  {
+    let url = NSURL (string: urlString)
     
     
     //Makes http Request
@@ -134,6 +142,26 @@ class FullScreenController: UIViewController
   @IBAction func menuButtonPressed(_ sender: Any)
   {
     performSegue(withIdentifier: "vcToMenu", sender: self)
+  }
+  
+  
+  @IBAction func webPressed(_ sender: Any)
+  {
+    if(webButton.titleLabel!.text == "Web Browser" )
+    {
+    urlString = "https://www.google.com/"
+    loadURL(urlString: urlString!)
+    webButton.backgroundColor = UIColor.red
+    webButton.setTitle("Live View", for: .normal)
+    }
+      
+    else
+    {
+      pageLoad()
+      webButton.backgroundColor = UIColor.cyan
+      webButton.setTitle("Web Browser", for: .normal)
+    }
+    
   }
   
   
