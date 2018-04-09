@@ -59,6 +59,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
   
   @IBAction func accessPhotosPressed(_ sender: Any)
   {
+    accessPhotosButton.showsTouchWhenHighlighted = true
     let image = UIImagePickerController()
     image.delegate = self
     image.sourceType = UIImagePickerControllerSourceType.photoLibrary

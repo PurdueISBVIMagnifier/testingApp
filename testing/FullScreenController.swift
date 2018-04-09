@@ -147,19 +147,17 @@ class FullScreenController: UIViewController
   
   @IBAction func webPressed(_ sender: Any)
   {
-    if(webButton.titleLabel!.text == "Web Browser" )
+    if(urlString != "https://www.google.com/" )
     {
     urlString = "https://www.google.com/"
     loadURL(urlString: urlString!)
-    webButton.backgroundColor = UIColor.red
-    webButton.setTitle("Live View", for: .normal)
+    webButton.setBackgroundImage(#imageLiteral(resourceName: "magnifyIcon"), for: .normal)
     }
       
     else
     {
       pageLoad()
-      webButton.backgroundColor = UIColor.cyan
-      webButton.setTitle("Web Browser", for: .normal)
+      webButton.setBackgroundImage(#imageLiteral(resourceName: "googleIcon"), for: .normal)
     }
     
   }
