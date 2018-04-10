@@ -22,7 +22,8 @@ class FullScreenController: UIViewController
   {
     super.viewDidLoad()
    
-    pageLoad()
+    urlString = "http://www.wtamu.edu/academic/anns/mps/math/mathlab/col_algebra/col_alg_tut36_longdiv.htm"
+    loadURL(urlString: urlString!)
 
   }
 
@@ -31,25 +32,22 @@ class FullScreenController: UIViewController
     super.didReceiveMemoryWarning()
   }
     
-  func pageLoad()
+ /* func pageLoad(urlString : String)
   {
     //IP STREAM TO VIEW CONTROLLER
     //IP ADDRESSES USED
     //192.168.1.4:8081  //128.46.121.195:8081 //128.46.121.195:8081 //10.160.165.62:8081  //128.211.222.119:8081
-    urlString = "http://www.wtamu.edu/academic/anns/mps/math/mathlab/col_algebra/col_alg_tut36_longdiv.htm"
     
-    loadURL(urlString: urlString!)
     
-  }
+    loadURL(urlString: urlString)
+    
+  } */
   
   func loadURL(urlString : String)
   {
     let url = NSURL (string: urlString)
-    
-    
     //Makes http Request
     let request = NSURLRequest(url: url! as URL);
-    
     //Loads http request into webView on application
     webViewTest.load(request as URLRequest);
   }
@@ -147,16 +145,15 @@ class FullScreenController: UIViewController
   
   @IBAction func webPressed(_ sender: Any)
   {
-    if(urlString != "https://www.google.com/" )
+    if(webButton.backgroundImage(for: .normal) != #imageLiteral(resourceName: "magnifyIcon"))
     {
-    urlString = "https://www.google.com/"
-    loadURL(urlString: urlString!)
+    loadURL(urlString: "https://www.google.com/")
     webButton.setBackgroundImage(#imageLiteral(resourceName: "magnifyIcon"), for: .normal)
     }
       
     else
     {
-      pageLoad()
+      loadURL(urlString: urlString!)
       webButton.setBackgroundImage(#imageLiteral(resourceName: "googleIcon"), for: .normal)
     }
     
