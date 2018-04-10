@@ -65,6 +65,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
     image.sourceType = UIImagePickerControllerSourceType.photoLibrary
     image.allowsEditing = false
     self.present(image, animated: true, completion: nil)
+    
   }
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
@@ -73,6 +74,7 @@ class SplitController: UIViewController, UINavigationControllerDelegate, UIImage
     if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
     {
       splitImageView.image = image
+      sSImage = image
     }
     //else
     //{
