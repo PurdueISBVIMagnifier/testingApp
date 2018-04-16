@@ -372,19 +372,14 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9pP-LU-N3S">
                                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0G-f7-FeB">
-                                        <rect key="frame" x="8" y="28" width="150" height="114"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
-                                        <state key="normal" title="Return" backgroundImage="returnIcon">
-                                            <color key="titleColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                        </state>
+                                        <gestureRecognizers/>
                                         <connections>
-                                            <action selector="returnPressed:" destination="lXN-FM-wgd" eventType="touchUpInside" id="YjC-iq-IRV"/>
+                                            <outletCollection property="gestureRecognizers" destination="0h1-53-wQF" appends="YES" id="wnf-Xs-qzJ"/>
+                                            <outletCollection property="gestureRecognizers" destination="0h1-53-wQF" appends="YES" id="NCH-TP-4Nr"/>
                                         </connections>
-                                    </button>
+                                    </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="9pP-LU-N3S" secondAttribute="bottom" id="5DE-7F-Ubw"/>
                                     <constraint firstItem="9pP-LU-N3S" firstAttribute="leading" secondItem="ygS-y3-ujG" secondAttribute="leading" id="bHK-7U-JxM"/>
@@ -393,6 +388,9 @@
                                     <constraint firstItem="9pP-LU-N3S" firstAttribute="top" secondItem="ygS-y3-ujG" secondAttribute="top" id="mEe-qZ-aJr"/>
                                     <constraint firstItem="9pP-LU-N3S" firstAttribute="centerX" secondItem="ygS-y3-ujG" secondAttribute="centerX" id="pMW-gj-YEQ"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0h1-53-wQF" appends="YES" id="y3l-I2-J00"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -407,14 +405,19 @@
                         <viewLayoutGuide key="safeArea" id="T7U-fE-udy"/>
                     </view>
                     <connections>
+                        <outlet property="doubleTap" destination="0h1-53-wQF" id="Yqh-ff-wlM"/>
                         <outlet property="imageView" destination="9pP-LU-N3S" id="TKB-QW-VmM"/>
-                        <outlet property="returnButton" destination="M0G-f7-FeB" id="YcE-QL-zWw"/>
                         <outlet property="scroll" destination="ygS-y3-ujG" id="8Kd-vq-9zm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCj-J3-HW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0h1-53-wQF">
+                    <connections>
+                        <action selector="doubleTH:" destination="lXN-FM-wgd" id="iB6-ne-PoL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1571.7625899280577" y="958.99280575539581"/>
+            <point key="canvasLocation" x="1569" y="957"/>
         </scene>
     </scenes>
     <resources>

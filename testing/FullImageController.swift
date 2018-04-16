@@ -14,7 +14,7 @@ class FullImageController: UIViewController, UIScrollViewDelegate
   var image : UIImage!
   
   //IB INITIALIZATIONS
-  @IBOutlet weak var returnButton: UIButton!
+  @IBOutlet var doubleTap: UITapGestureRecognizer!
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var scroll: UIScrollView!
   
@@ -33,11 +33,14 @@ class FullImageController: UIViewController, UIScrollViewDelegate
         super.didReceiveMemoryWarning()
     }
   
-  @IBAction func returnPressed(_ sender: Any)
+
+  @IBAction func doubleTH(_ sender: UITapGestureRecognizer)
   {
     self.dismiss(animated: true, completion: nil)
   }
   
+
+ 
   func viewForZooming(in scrollView: UIScrollView) -> UIView?
   {
     return imageView

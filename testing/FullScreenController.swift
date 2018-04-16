@@ -22,7 +22,7 @@ class FullScreenController: UIViewController
   {
     super.viewDidLoad()
    
-    urlString = "http://www.wtamu.edu/academic/anns/mps/math/mathlab/col_algebra/col_alg_tut36_longdiv.htm"
+    urlString = "http://192.168.0.100:8081"
     loadURL(urlString: urlString!)
 
   }
