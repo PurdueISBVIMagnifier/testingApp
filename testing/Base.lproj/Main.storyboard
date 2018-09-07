@@ -52,10 +52,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="W6W-t1-EU9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RsK-db-wME"/>
-                            <constraint firstItem="W6W-t1-EU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YXj-Ie-EfJ"/>
-                            <constraint firstItem="W6W-t1-EU9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hTA-vB-Cf5"/>
-                            <constraint firstAttribute="trailing" secondItem="W6W-t1-EU9" secondAttribute="trailing" id="ycJ-Ei-Pc9"/>
+                            <constraint firstItem="W6W-t1-EU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1FJ-d0-aco"/>
+                            <constraint firstAttribute="trailing" secondItem="W6W-t1-EU9" secondAttribute="trailing" id="342-IV-BBU"/>
+                            <constraint firstItem="W6W-t1-EU9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dOa-Dt-O1w"/>
+                            <constraint firstItem="W6W-t1-EU9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lBe-DO-XLL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
