@@ -15,8 +15,6 @@ class FullScreenController: UIViewController
   //IB INITIALIZATIONS
   @IBOutlet weak var webViewTest: WKWebView!
   @IBOutlet weak var menuButton: UIButton!
-  @IBOutlet weak var webButton: UIButton!
-  
   
   override func viewDidLoad()
   {
@@ -142,25 +140,5 @@ class FullScreenController: UIViewController
     performSegue(withIdentifier: "vcToMenu", sender: self)
   }
   
-  
-  @IBAction func webPressed(_ sender: Any)
-  {
-    if(webButton.backgroundImage(for: .normal) != #imageLiteral(resourceName: "magnifyIcon"))
-    {
-    loadURL(urlString: "https://www.google.com/")
-    webButton.setBackgroundImage(#imageLiteral(resourceName: "magnifyIcon"), for: .normal)
-    }
-      
-    else
-    {
-      loadURL(urlString: urlString!)
-      webButton.setBackgroundImage(#imageLiteral(resourceName: "googleIcon"), for: .normal)
-    }
     
-  }
-  
-  
-
-  
 }
-
