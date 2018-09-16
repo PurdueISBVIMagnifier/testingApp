@@ -27,18 +27,24 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-MT-Spc">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-MT-Spc">
                                 <rect key="frame" x="20" y="676" width="147" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="LKf-Cu-AgJ"/>
+                                    <constraint firstAttribute="width" constant="147" id="NGs-2b-haQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                 <state key="normal" title="Menu" image="settingIcon"/>
                                 <connections>
                                     <action selector="menuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyP-p4-GJi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYP-w5-IYr">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYP-w5-IYr">
                                 <rect key="frame" x="966" y="703" width="126" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="8Z5-ly-etT"/>
+                                    <constraint firstAttribute="height" constant="111" id="EaK-Id-SFy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                 <state key="normal" title="Snap Shot" backgroundImage="cameraIcon">
                                     <color key="titleColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
@@ -52,9 +58,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="gYP-w5-IYr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="341.5" id="1Dx-YO-WwR"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1FJ-d0-aco"/>
                             <constraint firstAttribute="trailing" secondItem="W6W-t1-EU9" secondAttribute="trailing" id="342-IV-BBU"/>
+                            <constraint firstItem="Cqk-MT-Spc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-462.5" id="DHa-cG-pps"/>
+                            <constraint firstItem="W6W-t1-EU9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JCx-ZX-dyy"/>
+                            <constraint firstItem="gYP-w5-IYr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="473" id="Mdl-04-22F"/>
+                            <constraint firstItem="W6W-t1-EU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a1l-om-ghR"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dOa-Dt-O1w"/>
+                            <constraint firstItem="Cqk-MT-Spc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="328" id="ktB-bb-FBl"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lBe-DO-XLL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
