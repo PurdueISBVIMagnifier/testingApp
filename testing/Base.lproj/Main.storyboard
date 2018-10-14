@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,11 +28,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-MT-Spc">
-                                <rect key="frame" x="20" y="676" width="147" height="138"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="138" id="LKf-Cu-AgJ"/>
-                                    <constraint firstAttribute="width" constant="147" id="NGs-2b-haQ"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="734" width="80" height="80"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                 <state key="normal" title="Menu" image="settingIcon"/>
                                 <connections>
@@ -40,11 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYP-w5-IYr">
-                                <rect key="frame" x="966" y="703" width="126" height="111"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="126" id="8Z5-ly-etT"/>
-                                    <constraint firstAttribute="height" constant="111" id="EaK-Id-SFy"/>
-                                </constraints>
+                                <rect key="frame" x="1012" y="734" width="80" height="80"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                 <state key="normal" title="Snap Shot" backgroundImage="cameraIcon">
                                     <color key="titleColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
@@ -58,16 +50,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="gYP-w5-IYr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="341.5" id="1Dx-YO-WwR"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1FJ-d0-aco"/>
                             <constraint firstAttribute="trailing" secondItem="W6W-t1-EU9" secondAttribute="trailing" id="342-IV-BBU"/>
-                            <constraint firstItem="Cqk-MT-Spc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-462.5" id="DHa-cG-pps"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cqk-MT-Spc" secondAttribute="bottom" constant="20" id="BrT-1y-9EY"/>
+                            <constraint firstItem="gYP-w5-IYr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-100" id="BzH-rq-gbj"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JCx-ZX-dyy"/>
-                            <constraint firstItem="gYP-w5-IYr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="473" id="Mdl-04-22F"/>
+                            <constraint firstItem="Cqk-MT-Spc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PY8-fj-LqZ"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a1l-om-ghR"/>
+                            <constraint firstItem="Cqk-MT-Spc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-100" id="bST-7A-G3z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gYP-w5-IYr" secondAttribute="trailing" constant="20" id="cyO-sC-vVZ"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dOa-Dt-O1w"/>
-                            <constraint firstItem="Cqk-MT-Spc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="328" id="ktB-bb-FBl"/>
+                            <constraint firstItem="Cqk-MT-Spc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ho2-eZ-pb2"/>
                             <constraint firstItem="W6W-t1-EU9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lBe-DO-XLL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gYP-w5-IYr" secondAttribute="bottom" constant="20" id="m2C-jN-ZBl"/>
+                            <constraint firstItem="gYP-w5-IYr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-100" id="pUO-ll-HS6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -136,9 +132,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4v-Ej-Mt3">
-                                <rect key="frame" x="0.0" y="0.0" width="548" height="418"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4v-Ej-Mt3">
+                                <rect key="frame" x="0.0" y="0.0" width="556" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -153,9 +148,8 @@
                                     <segue destination="Jv2-s6-JBe" kind="show" identifier="segueToDevice" id="wBc-3T-UfF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABM-a5-KW7">
-                                <rect key="frame" x="556" y="0.0" width="556" height="418"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABM-a5-KW7">
+                                <rect key="frame" x="556" y="0.0" width="556" height="427"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="Return">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -171,9 +165,8 @@
                                     <action selector="returnToFS:" destination="zH7-w1-LQj" eventType="touchUpInside" id="1PL-B4-pHc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdY-Bi-SpE">
-                                <rect key="frame" x="0.0" y="417" width="548" height="417"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdY-Bi-SpE">
+                                <rect key="frame" x="0.0" y="427" width="556" height="407"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -187,9 +180,8 @@
                                     <segue destination="6sj-QG-mFo" kind="show" identifier="menuToSV" id="9dc-PF-T9Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJe-gV-tZg">
-                                <rect key="frame" x="556" y="416" width="556" height="418"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJe-gV-tZg">
+                                <rect key="frame" x="556" y="427" width="556" height="407"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -205,6 +197,24 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ABM-a5-KW7" firstAttribute="bottom" secondItem="Kk5-nf-T7u" secondAttribute="centerY" id="8n8-H4-UdI"/>
+                            <constraint firstItem="ABM-a5-KW7" firstAttribute="top" secondItem="Jgs-0t-K5y" secondAttribute="top" id="Eqc-45-v8i"/>
+                            <constraint firstItem="mdY-Bi-SpE" firstAttribute="bottom" secondItem="Kk5-nf-T7u" secondAttribute="bottom" id="Ixi-ld-PZz"/>
+                            <constraint firstItem="ABM-a5-KW7" firstAttribute="leading" secondItem="Kk5-nf-T7u" secondAttribute="centerX" id="Ur8-va-uFu"/>
+                            <constraint firstItem="J4v-Ej-Mt3" firstAttribute="leading" secondItem="Kk5-nf-T7u" secondAttribute="leading" id="WSR-Gi-zFp"/>
+                            <constraint firstItem="J4v-Ej-Mt3" firstAttribute="top" secondItem="Jgs-0t-K5y" secondAttribute="top" id="cQA-Af-mXH"/>
+                            <constraint firstItem="ABM-a5-KW7" firstAttribute="trailing" secondItem="Kk5-nf-T7u" secondAttribute="trailing" id="caW-wm-Nuh"/>
+                            <constraint firstItem="J4v-Ej-Mt3" firstAttribute="bottom" secondItem="Kk5-nf-T7u" secondAttribute="centerY" id="dpR-Ii-r5v"/>
+                            <constraint firstItem="KJe-gV-tZg" firstAttribute="top" secondItem="Kk5-nf-T7u" secondAttribute="centerY" id="dwG-B5-iBQ"/>
+                            <constraint firstItem="KJe-gV-tZg" firstAttribute="leading" secondItem="Kk5-nf-T7u" secondAttribute="centerX" id="nw7-SQ-j4J"/>
+                            <constraint firstItem="mdY-Bi-SpE" firstAttribute="leading" secondItem="Kk5-nf-T7u" secondAttribute="leading" id="oKQ-rH-E0g"/>
+                            <constraint firstItem="mdY-Bi-SpE" firstAttribute="trailing" secondItem="Kk5-nf-T7u" secondAttribute="centerX" id="qhx-V5-GLl"/>
+                            <constraint firstItem="mdY-Bi-SpE" firstAttribute="top" secondItem="Kk5-nf-T7u" secondAttribute="centerY" id="qpo-mt-ZMr"/>
+                            <constraint firstItem="J4v-Ej-Mt3" firstAttribute="trailing" secondItem="Kk5-nf-T7u" secondAttribute="centerX" id="tnm-eQ-m1l"/>
+                            <constraint firstItem="KJe-gV-tZg" firstAttribute="bottom" secondItem="Kk5-nf-T7u" secondAttribute="bottom" id="vnM-Te-ON8"/>
+                            <constraint firstItem="KJe-gV-tZg" firstAttribute="trailing" secondItem="Kk5-nf-T7u" secondAttribute="trailing" id="yhb-7a-nkB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kk5-nf-T7u"/>
                     </view>
                     <connections>
@@ -426,10 +436,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cameraIcon" width="500" height="500"/>
-        <image name="photoLibrary" width="500" height="500"/>
-        <image name="returnIcon" width="50" height="50"/>
-        <image name="settingIcon" width="500" height="500"/>
+        <image name="cameraIcon" width="40" height="40"/>
+        <image name="photoLibrary" width="40" height="40"/>
+        <image name="returnIcon" width="40" height="40"/>
+        <image name="settingIcon" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cSm-hL-He6"/>
